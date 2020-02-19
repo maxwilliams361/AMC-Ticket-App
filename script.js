@@ -1,7 +1,11 @@
+let amountTickets={};
 let wavesReviews=["... avoids coming-of-age clichés while probing familiar themes in fresh and authentic ways. Bolstered by stylish visual flourishes, it's a harrowing and provocative plea for compassion.", "The film is too long, but I was impressed and riveted throughout.", "Provocatively examines black masculinity and the burden of living up to a societal standard, as well as a parental one."];
 let bombReviews=["... as a former Fox victim, I can say I was totally caught up in [Bombshell]. And you will be too. My only question is, how do we feel about these actors playing really awful people? Because the women — despite being sexually harassed — were not forced to deliver, day after day, crazy right wing opinions, Fake News, and so on. That’s something that will be debated."];
 let clemReviews=["A mature star-driven vehicle elevated by a brilliant performance that deserves all the awards it can get.","Chukwu's film is further proof that great moviemaking is key to bringing audiences into profound, somber head spaces.","If Chukwu just wants the audience to witness Bernadine's burden, the script overplays its hand by questioning Anthony's guilty conviction."];
-
+let ticketPriceAdult=16.50;
+let tickerPriceChild=12.50;
+let ticketTotal=$(".ticketType").val();
+console.log(ticketTotal);
 $(".wavesImg").dblclick(function(){
     $(".headerWaves").show();
     $(".headerBomb").hide();
@@ -50,6 +54,9 @@ $(".buyTickets").dblclick(function(){
    $(".ticketType").show();
  });
 
-
-    
+$(".confirmTickets").dblclick(function(){
+    let amount = Number($(".ticketNumber").val());
+    amountTickets.push(amount);
+    console.log(amountTickets);
+});
     
